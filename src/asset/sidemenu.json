@@ -1,0 +1,48 @@
+[
+  {
+  "id": 10001,
+  "name": "Function",
+  "icon": "eraser",
+  "child": [
+    {
+      "name": "Weather",
+      "id": 1000101,
+      "icon": "bolt"
+    },
+    {
+      "name": "map",
+      "id": 1000102,
+      "icon": "map-marked-alt"
+    }
+  ] 
+  },
+  {
+    "id": 10002,
+    "name": "Crawler",
+    "icon": "align-left",
+    "child": [
+      {
+        "id": 1000201,
+        "icon": "share-square",
+        "name": "Dcard"
+      },
+      {
+        "id": 1000202,
+        "icon": "american-sign-language-interpreting",
+        "name": "Ptt"
+      }
+    ]
+  },
+  {
+    "id": 10004,
+    "name": "System",
+    "icon": "assistive-listening-systems",
+    "child": [
+      {
+        "name": "Account",
+        "id": 1000401,
+        "icon": "user"
+      }
+    ]
+  }
+]
