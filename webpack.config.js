@@ -4,10 +4,11 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const webpackMerge = require("webpack-merge");
+const path = require('path');
 
 const modeConfig = env => require(`./webpack.utils/webpack.${env}`)(env);
 
-module.exports = ({ mode, API_URI }) =>
+module.exports = ({ mode, API_URI, PORT=8080 }) => console.log("port: ", PORT) || 
   webpackMerge(
     {
       entry: "./index.js",
@@ -18,6 +19,11 @@ module.exports = ({ mode, API_URI }) =>
       },
       resolve: {
         extensions: [".js", ".jsx", ".json", ".ts", ".tsx"]
+      },
+      devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        compress: true,
+        port: PORT,
       },
       module: {
         rules: [

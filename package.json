@@ -7,6 +7,7 @@
     "webpack-dev-server": "webpack-dev-server",
     "webpack": "webpack -p",
     "dev": "npm run webpack-dev-server -- --env.mode development --env.API_URI=http://localhost:5000",
+    "deploy": "npm run webpack-dev-server -- --env.mode development --env.API_URI=http://streamapi.tomas.website --env.PORT=12002",
     "prod": "npm run webpack -- --env.mode production",
     "format": "prettier --write \"**/*.{js,jsx,json}\"",
     "format:check": "prettier --list-different \"**/*.{js.jsx.json}\"",
