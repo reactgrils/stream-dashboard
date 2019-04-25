@@ -8,7 +8,7 @@ const path = require('path');
 
 const modeConfig = env => require(`./webpack.utils/webpack.${env}`)(env);
 
-module.exports = ({ mode, API_URI, PORT=8080 }) => 
+module.exports = ({ mode, API_URI, HOST, PORT=8080 }) => 
   webpackMerge(
     {
       entry: "./index.js",
@@ -23,6 +23,7 @@ module.exports = ({ mode, API_URI, PORT=8080 }) =>
       devServer: {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
+        host: HOST,
         port: PORT,
       },
       module: {
