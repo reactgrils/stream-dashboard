@@ -25,7 +25,7 @@ pipeline:
     script:
       - . /root/.nvm/nvm.sh && nvm use 10.9.0
       - mkdir -p /var/www/html/stream-dashboard.tomas.website
-      - cp -a ./* /var/www/html/stream-dashboard.tomas.website
+      - cp -a ./drone/src/github.com/reactgrils/stream-dashboard/* /var/www/html/stream-dashboard.tomas.website
       - cd /root/drone/src/github.com/reactgrils/stream-dashboard
       - yarn install
       - sudo kill $(sudo lsof -t -i:12002)
